@@ -58,7 +58,7 @@ export function QRCodeDisplay({ text }: QRCodeDisplayProps) {
               link.click()
             }
           }}
-          className="gap-2"
+          className="gap-2 rounded-2xl"
         >
           <Download className="h-4 w-4" />
           Download QR Code
