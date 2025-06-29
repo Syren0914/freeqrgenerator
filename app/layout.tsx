@@ -1,30 +1,32 @@
-import "@/styles/globals.css"
-import { Inter } from "next/font/google"
-import Head from "next/head"
-import type React from "react" // Import React
+import "@/styles/globals.css";
+import { Inter } from "next/font/google";
+import Script from "next/script";
+import type React from "react";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+  
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <Head>
-        <script
+      <head />
+      <body className={inter.className}>
+        {/* AdSense Script - loads only on client side after hydration */}
+        <Script
           async
+          strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5002064208204178"
           crossOrigin="anonymous"
-        ></script>
-      </Head>
-      <body className={inter.className}>{children}</body>
-      
+        />
+        {children}
+      </body>
     </html>
-  )
+  );
 }
-
-export const metadata = {
-      generator: 'v0.dev'
-    };
