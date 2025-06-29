@@ -6,7 +6,8 @@ import type React from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  
+  name="google-adsense-account", 
+  content="ca-pub-5002064208204178"
 };
 
 export default function RootLayout({
