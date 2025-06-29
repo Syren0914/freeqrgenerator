@@ -1,8 +1,10 @@
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import type React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata = {
   title: "Free QR Generator",
@@ -20,6 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
+
       <head />
       <body className={inter.className}>{children}</body>
     </html>
