@@ -1,13 +1,16 @@
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import type React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  name: "google-adsense-account", 
-  content: "ca-pub-5002064208204178"
+  title: "Free QR Generator",
+  description: "Generate QR codes instantly for free.",
+  generator: "v0.dev",
+  other: {
+    "google-adsense-account": "ca-pub-5002064208204178",
+  },
 };
 
 export default function RootLayout({
@@ -18,16 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className={inter.className}>
-        {/* AdSense Script - loads only on client side after hydration */}
-        <Script
-          async
-          strategy="afterInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5002064208204178"
-          crossOrigin="anonymous"
-        />
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
