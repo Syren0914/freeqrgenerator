@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Header } from "@/components/header"
-import { TextInput } from "@/components/text-input"
-import { QRCodeDisplay } from "@/components/qr-code-display"
-import { Footer } from "@/components/footer"
-import { Card, CardContent } from "@/components/ui/card"
-import { Zap, Shield, Download } from "lucide-react"
+import { useState } from "react";
+import { Header } from "@/components/header";
+import { TextInput } from "@/components/text-input";
+import { QRCodeDisplay } from "@/components/qr-code-display";
+import { Footer } from "@/components/footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { Zap, Shield, Download } from "lucide-react";
 
 export default function Page() {
-  const [inputText, setInputText] = useState("")
+  const [inputText, setInputText] = useState("");
 
   return (
     <div className="min-h-screen bg-background">
@@ -36,7 +36,11 @@ export default function Page() {
                   <Zap className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">Instant Generation</h3>
-                <p className="text-sm text-muted-foreground">QR codes are generated instantly as you type</p>
+                <p className="text-sm text-muted-foreground">
+                  Generate QR codes as you type—no waiting, no reloads. Supports
+                  websites, phone numbers, email addresses, and custom text.
+                  Great for fast marketing and real-time testing.
+                </p>
               </CardContent>
             </Card>
 
@@ -46,7 +50,10 @@ export default function Page() {
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">Completely Free</h3>
-                <p className="text-sm text-muted-foreground">No registration, no limits, completely free to use</p>
+                <p className="text-sm text-muted-foreground">
+                  No sign-up required. No usage limits. Your input stays in your browser—perfect
+                  for privacy-focused users and developers alike.
+                </p>
               </CardContent>
             </Card>
 
@@ -56,7 +63,11 @@ export default function Page() {
                   <Download className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">High Quality</h3>
-                <p className="text-sm text-muted-foreground">Download high-resolution PNG images</p>
+                <p className="text-sm text-muted-foreground">
+                  Download your QR code as a crisp PNG image. Optimized for
+                  print, menus, business cards, product packaging, and social
+                  media sharing. Always sharp and scannable.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -65,5 +76,5 @@ export default function Page() {
         <Footer />
       </div>
     </div>
-  )
+  );
 }
